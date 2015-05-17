@@ -104,6 +104,15 @@ function base_preprocess_comment(&$vars){
 	//kpr($vars);
 }
 
+function base_preprocess_search_result(&$vars) {
+
+  	$image_path = $vars['result']['node']->field_cover_image['und'][0]['uri'];
+  	$vars['cover_image'] = l(base_render_image($image_path, 'cover_image_large',  ''), $vars['url'], array('html'=>TRUE));
+  	$vars['title'] = l($vars['title'], $vars['url']);
+	$vars['theme_hook_suggestions'][] = 'search_result';
+  //dpm(base_render_image($image_path, 'cover_image_large',  ''));
+}
+
 
 // FORM ALTER
 function base_form_alter(&$form, &$form_state, $form_id) {
@@ -127,7 +136,7 @@ function base_form_alter(&$form, &$form_state, $form_id) {
 } 
 
 // Renders image with a given image style
-function base_render_image($path, $style = 'default', $url='', $alt){
+function base_render_image($path, $style = 'default', $url='', $alt = ''){
 	$image_style = array( 'style_name' => $style, 'path' => $path, 'alt' => $alt, 'attributes' => array('class' => 'image-post_full', 'data-url' => $url));
 	return theme('image_style', $image_style);
 };
