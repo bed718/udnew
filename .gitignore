@@ -6,4 +6,5 @@ sites/*/files
 sites/*/private
 
 
+site_backup.tar.gz
 files_backup.tar.gz
