@@ -12,7 +12,7 @@
  * Preprocess functions for page.tpl.php.
  */
 function base_preprocess_page(&$vars){
-	dpm(drupal_get_query_parameters());
+	//dpm(drupal_get_query_parameters());
 }
  
 

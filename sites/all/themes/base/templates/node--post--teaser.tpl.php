@@ -19,10 +19,7 @@
 			<div class="social-icons">
 				<?php echo $service_links; ?>
 			</div>
-			<div class="tags">
-				<?php echo $section; ?>
-				<?php if(isset($tags)): ?><?php echo $tags; ?><?php endif; ?>
-			</div>
+			
 		</div>
 	</div>
 </div>
