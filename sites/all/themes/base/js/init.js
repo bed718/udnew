@@ -77,6 +77,7 @@ Drupal.behaviors.init = {
 
 		});		
 
+
 		function showUDS(){
 			$('.front #ud-sm').animate({top: 0}, 500);
 			$('.front #header .bot').slideDown(500);

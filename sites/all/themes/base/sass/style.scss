@@ -38,6 +38,10 @@ p{
   @include bp(s){
     font-size: 14px;
   }
+
+  a{
+    text-decoration: underline;
+  }
 }
 
 p + p{
@@ -1022,6 +1026,12 @@ input[type="button"]{
   }
 }
 
+#search-form{
+  max-width: 800px;
+  padding: 40px;
+  background-color: $page_med;
+  margin: 0 auto 40px;
+}
 
 
 
@@ -1259,7 +1269,7 @@ input[type="button"]{
     @include pie-clearfix;
     max-width: $bp_lg;
     margin: 0 auto;
-    padding: 80px;
+    padding: 40px;
 
     @include bp(s){
       padding-left: 20px;
@@ -1269,6 +1279,15 @@ input[type="button"]{
   }
 
   .content{
+    float: left;
+    max-width: 60%;
+    padding-left: 40px;
+
+    h3{
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
 
     @include bp(m){
       max-width: 500px;
@@ -1281,9 +1300,8 @@ input[type="button"]{
     background-color: #fff;
     padding: 40px;
     float: left;
-    margin-top: -170px;
-    margin-right: 80px;
-    max-width: 400px;
+    margin-top: -80px;
+    max-width: 40%;
 
     @include bp(m){
       float: none;
@@ -1321,9 +1339,15 @@ input[type="button"]{
     line-height: 2em;
   }
 
+  .author{
+      margin-top: 20px;
+    }
+
   .quote{
     font-size: 3em;
     line-height: normal;
+
+
 
     @include bp(m){
       font-size: 1.5em;

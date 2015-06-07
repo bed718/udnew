@@ -52,8 +52,8 @@
 		<div class="inner">
 			<div class="content">
 				<span class="divider"></span>
-				<p>Upstairs Downstairs is here to celebrate what being a woman is all about. What better way than lingerie? So much more than just what you put on underneath your clothes, it’s a love for the experience of being a woman.</p>
-				<p>Be confident, embrace your femininity, and celebrate your body, it’s an intimate relationship with the most important person: yourself.</p>
+				<p>Upstairs Downstairs is here to celebrate what being a woman is all about. What better way than lingerie? So much more than just what you put on underneath your clothes, it's a love for the experience of being a woman.</p>
+				<p>Be confident, embrace your femininity, and celebrate your body, it's an intimate relationship with the most important person: yourself.</p>
 				<span class="divider"></span>
 			</div>
 		</div>
@@ -62,17 +62,26 @@
 		<div class="inner">
 			<div class="image"><img src="/<?php print path_to_theme(); ?>/images/UDXO-Megan-1.jpg" alt="Megan Luke Edwards"></div>
 			<div class="content">
-				<h2>A bit about Megan...</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In adipisci recusandae numquam, cum quos minus repudiandae maxime, illo et quidem labore distinctio perspiciatis placeat quo non ratione praesentium, modi quisquam.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint at, cupiditate voluptatem porro soluta sapiente iure aliquam itaque fugiat deleniti, eligendi illum architecto ipsum veniam eum, asperiores doloribus molestias possimus omnis a.</p>
+				<h2>A bit about me...</h2>
+				<h3>Why upstairs downstairs?</h3>
+				<p>I've always had a fantasy of being a lingerie designer. From the time I realized that my undergarment game did not have to be ruled by mass produced padded bras… a whole world of femininity opened up for me. During the day (well, and night and weekends too) I'm a photography agent representing the most amazing artists at Copious Management—my absolute dream job! This leaves no time to start/run a lingerie brand, so this blog is my creative outlet to inspire women and interact with the lingerie community worldwide!</p>
+
+				<h3>Why lingerie?</h3>
+				<p>Recently I was challenged on this question. I believe that lingerie can be a power suit for women. You don't have to buy it for another person's pleasure, you can buy it for you. It doesn't have to be the stereotypical lace, garter, underwire situation... don't underestimate the sexy coziness of a good brief and soft bralette. Lingerie is such a fun way to experience the love of being a woman!</p>
+
+				<h3>Why los angeles?</h3>
+				<p>I've always dreamed of being in the photography world. After touring as a professional dancer in <a href="http://lordofthedance.com">Lord of the Dance</a>, I decided it was time to make the change. In terms of industry, it was either New York or LA. Growing up in Nebraska and in Florida, both choices seemed grand. However, there was a really cute boy I met on tour that resided in LA, so LA it was. (That cute boy is now my husband who designed my site and owns the creative agency <a href="http://aimhighagency.com" target="_blank">Aim High Creative.</a>)</p>
+
+				<h3>Fantasy dinner party guests?</h3>
+				<p>Ron Burgundy, Marc Maron, and Cleopatra.</p>
 			</div>
 		</div>
 	</div>
 	<div id="quote-slide">
 		<div class="inner">
 			<div class="content">
-				<div class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, distinctio.</div>
-				<div class="author">some lady</div>
+				<div class="quote">The question isn’t who is going to let me&mdash;it’s who is going to stop me</div>
+				<div class="author">Ayn Rand</div>
 			</div>
 		</div>
 	</div>
