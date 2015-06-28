@@ -6,7 +6,8 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <link href='http://fonts.googleapis.com/css?family=Gilda+Display|Lato:100italic,300italic,700italic,100,300,400,700' rel='stylesheet' type='text/css' />
+  <!-- <link href='http://fonts.googleapis.com/css?family=Gilda+Display|Lato:100italic,300italic,700italic,100,300,400,700' rel='stylesheet' type='text/css' /> -->
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900,400italic,900italic|Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php print $styles; ?>
   <?php print $scripts; ?>

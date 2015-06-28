@@ -1,7 +1,7 @@
 <div class="full post">
 	<div class="header">
 		<h1><?php print $node_title; ?></h1>
-		<div class="meta"><?php print $created; ?> by <a href="">Megan</a></div>
+		<div class="meta"><?php print $created; ?></div>
 	</div>
 
 	<div class="body"><?php print $body; ?>
@@ -17,6 +17,7 @@
 	<div class="footer">
 		<div class="tags">
 			<?php if(isset($tags)): ?>
+				
 				<?php echo $section; ?>
 				<?php echo $tags; ?>
 			<?php endif; ?>

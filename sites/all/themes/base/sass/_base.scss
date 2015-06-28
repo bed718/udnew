@@ -5,12 +5,12 @@ $body_pad:			20px;
 $gap:               40px;
 $border_width:      8px;
 
-$bp_lg:           1200px;
+$bp_lg:           2000px;
 $bp_med:          1080px;
 $bp_sm:           700px;
 
 /*  COLORS  */
-$color_main:         #000;                 
+$color_main:         #222;                 
 $color_accent:       #225262;              
 $color_main_lt:      #999;
 $color_error:        #b54747;
@@ -25,9 +25,9 @@ $border_dashed:     $color_accent dashed 1px;
 
 /*  TYPOGROPHY */
 $font_main:					'Lato', sans-serif;
-$font_header:				'Lato', sans-serif;
+$font_header:				'Playfair Display', serif;
 $font_fancy:        'LatoItalic', serif;
-$font_body:         'Gilda Display', serif;
+$font_body:         'Lato', sans-serif;
 
 $font_weight_lt:         100;
 $font_weight_reg:        400;
@@ -95,15 +95,17 @@ $default-box-shadow-blur: 3px;
 
 %btn_default{
   @include transition;
-  @include border-radius(3px);
+  @include inline-block;
+  //@include border-radius(3px);
   border: none;
-  background-color: $color_accent;
+  background-color: $color_main;
   padding: 10px 20px;
   text-transform: uppercase;
   color: $page_bg;
   font-family: $font_main;
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 10px;
   cursor: pointer;
 
   &:hover{
@@ -112,10 +114,15 @@ $default-box-shadow-blur: 3px;
   }
 }
 
+%btn_small{
+  @extend %btn_default;
+  padding: 0 5px;
+}
+
 %box-accent{
   padding: 80px;
-  background-color: rgba($color_accent, .8);
-  color: $page_bg;
+  background-color: rgba(#fff, .9);
+  //color: $page_bg;
   max-width: 600px;
   margin: 0 auto;
 
@@ -130,7 +137,9 @@ $default-box-shadow-blur: 3px;
 -------------------------------------------------------------- */
 
 
-
+.btn{
+  @extend %btn_default;
+}
 
 
 

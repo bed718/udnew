@@ -52,9 +52,11 @@
 		<div class="inner">
 			<div class="content">
 				<span class="divider"></span>
+				<h2>A bit about UD...</h2>
 				<p>Upstairs Downstairs is here to celebrate what being a woman is all about. What better way than lingerie? So much more than just what you put on underneath your clothes, it's a love for the experience of being a woman.</p>
 				<p>Be confident, embrace your femininity, and celebrate your body, it's an intimate relationship with the most important person: yourself.</p>
-				<span class="divider"></span>
+				<span class="btn">&darr;</span>
+				
 			</div>
 		</div>
 	</div>
@@ -80,8 +82,8 @@
 	<div id="quote-slide">
 		<div class="inner">
 			<div class="content">
-				<div class="quote">The question isn’t who is going to let me&mdash;it’s who is going to stop me</div>
-				<div class="author">Ayn Rand</div>
+				<div class="quote">I am mine. Before I am anyone elses.</div>
+				<div class="author">Nayyirah Waheed</div>
 			</div>
 		</div>
 	</div>

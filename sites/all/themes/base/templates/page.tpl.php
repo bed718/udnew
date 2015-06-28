@@ -82,7 +82,7 @@
 <div id="footer">
 <div id="footer-main" class="clearfix"><?php echo render($page['footer_main']); ?></div>
 	<div id="footer-iner">
-		<div id="copy">&copy; <?php echo date('Y'); ?> Upstairs Downstairs – Don't steal. It's not nice. Website by <a href="http://aimhighforlife.com" target="_blank">Aim High Creative</a></div>
+		<div id="copy">&copy; <?php echo date('Y'); ?> Upstairs Downstairs – Don't steal. It's not nice. Website by <a href="http://aimhighforlife.com" target="_blank">Aim High Agency</a></div>
 	</div>
 </div>
 

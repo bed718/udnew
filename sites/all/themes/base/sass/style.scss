@@ -34,6 +34,7 @@ a{
 
 p{
   font-family: $font_body;
+  font-size: 20px;
 
   @include bp(s){
     font-size: 14px;
@@ -41,6 +42,12 @@ p{
 
   a{
     text-decoration: underline;
+  }
+
+  .fancy{
+    font-family: $font_header;
+    font-weight: 900;
+    //font-size: 40px;
   }
 }
 
@@ -69,7 +76,8 @@ ul.menu li{
 li a.active,
 li.opened span.nolink{color: $color_main;}
 
-h2{font-size: 30px;}
+h2{font-size: 30px; font-weight: 900;}
+h3{font-weight: 900;}
 
 /* Layout
 -------------------------------------------------------------- */
@@ -128,6 +136,10 @@ h2{font-size: 30px;}
     top: 0;
     left: 224px;
 
+    span{
+      left: 30px;
+    }
+
     a{
       @extend %a_lt;
     }
@@ -156,6 +168,7 @@ h2{font-size: 30px;}
     .logo{
       top: 0;
       left: 10px;
+
     }
 
   }
@@ -163,31 +176,36 @@ h2{font-size: 30px;}
 
 .logo{
   position: absolute;
-  font-family: $font_header;
+  //font-family: $font_header;
   text-transform: uppercase;
-  width: 200px;
-  
+  width: 800px;
+  //font-weight: 900;
+  //font-family: $font_header;
 
 
   span{
     display: block;
     position: relative;
-    left: ($gap / 2);
+    left: 90px;
   }
 
   .slogan{
     margin-left: 60px;
     font-style: italic;
+    font-family: $font_header;
+    //font-weight: 900;
     text-transform: lowercase;
   }
 
   &.main{
     left: 50%;
-    margin-left: 200px;
+    margin-left: -80px;
     top: 200px;
+    font-size: 3em;
+    font-weight: 100;
 
     .slogan{
-      margin-top: 10px;
+      margin-left: 170px;
     }
   }
 }
@@ -234,8 +252,9 @@ body.nav-active{
   @include pie-clearfix;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: $font_header;
+  //font-family: $font_header;
   float: right;
+  font-weight: 400;
   line-height: 45px;
   display: block;
 
@@ -371,8 +390,12 @@ body.nav-active{
 #main-content{
   max-width: $bp_lg;
   margin: auto;
-  padding: 0 ($gap / 2);
+  padding: 0 ($gap * 3);
   margin-top: $gap * 3;
+  
+  @include bp(m){
+    padding: 0 ($gap);
+  }
 
   @include bp(s){
     margin-top: 50px;
@@ -381,14 +404,14 @@ body.nav-active{
 }
 
 .label{
-  font-family: $font_header;
-  font-style: italic;
-  padding: 10px;
+  //font-family: $font_header;
+  //font-style: italic;
+  padding: 10px 20px;
   background-color: $color_accent;
   color: $page_bg;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: 10px;
   font-weight: 400;
 }
 
@@ -490,6 +513,10 @@ body.nav-active{
   }
 }
 
+.btn{
+  @extend %btn_default;
+}
+
 /* POST
 -------------------------------------------------------------- */
 .post{
@@ -529,10 +556,11 @@ body.nav-active{
     }
 
     h1, h2{
-      font-size: 34px;
-      font-weight: 300;
+      font-size: 40px;
+      font-weight: 900;
       line-height: 1;
       margin-bottom: 10px;
+
 
       @include bp(m){
         font-size: 28px;
@@ -544,7 +572,7 @@ body.nav-active{
     }
 
     h1{
-      font-size: 40px;
+      font-size: 70px;
 
       @include bp(m){
         font-size: 28px;
@@ -552,8 +580,11 @@ body.nav-active{
     }
 
     .meta{
-      font-family: $font_header;
-      font-style: italic;
+      //font-family: $font_header;
+      //font-style: italic;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2px;
     }
   }
 
@@ -562,12 +593,21 @@ body.nav-active{
   }
 
   .read-more{
-    font-family: $font_header;
-    font-weight: 200;
-    text-transform: uppercase;
-    font-size: 34px;
-    margin-top: 10px;
-    letter-spacing: 2px;
+    //font-family: $font_header;
+    margin-top: 20px;
+    
+
+    a{
+      @include inline-block;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 10px;
+      margin-top: 10px;
+      letter-spacing: 2px;
+      padding: 10px 20px;
+      background-color: $color_main;
+      color: $page_bg;
+    }
 
     @include bp(m){
       font-size: 30px;
@@ -580,9 +620,8 @@ body.nav-active{
     margin-top: 10px;
 
     a{
-      font-size: 12px;
-      font-weight: 700;
-      display: block;
+      @extend %btn_small;
+      
     }
   }
 
@@ -610,12 +649,16 @@ body.nav-active{
     }
   }
 
+  h2{
+    font-size: 70px;
+  }
+
   .side{
     margin-top: ($gap / 2);
     float: left;
     width: 60%;
     padding-right: $gap;
-    border-right: $color_accent dashed 1px;
+   // border-right: $color_accent dashed 1px;
 
     @include bp(s){
       float: none;
@@ -643,7 +686,7 @@ body.nav-active{
   }
 
   .footer{
-    float: right;
+    float: left;
     width: 40%;
     margin-top: ($gap / 2);
     padding-left: ($gap / 2);
@@ -719,12 +762,12 @@ body.nav-active{
   }
 
   .read-more{
-    text-align: center;
-    margin: 30px 0 $gap;
+    //text-align: center;
+   // margin: 30px 0 $gap;
 
     @include bp(m){
-      margin-top: $gap / 2;
-      margin-bottom: $gap / 2;
+     // margin-top: $gap / 2;
+     // margin-bottom: $gap / 2;
     }
   }
 
@@ -773,8 +816,17 @@ body.nav-active{
   padding-bottom: $gap;
 
   p{
-    padding-right: $gap;
-    padding-left: $gap;
+    padding: 0 $gap;
+    max-width: 800px;
+    //margin: ($gap * 2) auto;
+   // background-color: $page_med;
+    //margin-left: auto;
+    //margin-right: auto;
+    font-size: 20px;
+
+    &.image-holder{
+      max-width: 100%;
+    }
 
     @include bp(m){
       padding-right: $gap / 2;
@@ -791,8 +843,9 @@ body.nav-active{
   }
 
   .header{
-    margin-bottom: $gap;
+    margin-bottom: $gap / 2;
     margin-top: $gap;
+    max-width: 100%;
 
     @include bp(m){
       margin-bottom: $gap / 2;
@@ -813,7 +866,8 @@ body.nav-active{
   }
 
   .credits{
-    padding-bottom: $gap;
+    padding: $gap;
+
 
     h2{
       font-size: 20px;
@@ -824,22 +878,31 @@ body.nav-active{
     }
   }
 
+  .image-holder{
+    padding: $gap;
+    background-color: $page_lt;
+    line-height: 0;
+    margin-bottom: 0;
+
+    img{
+      width: 100%;
+    }
+
+    @include bp(m){
+      padding: $gap / 2;
+    }
+  }
+
+  .image-holder + .image-holder{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    background-color: #fff !important;
+  }
+
 
 }
 
-.image-holder{
-  padding: $gap;
-  background-color: $page_lt;
-  line-height: 0;
 
-  img{
-    width: 100%;
-  }
-
-  @include bp(m){
-    padding: $gap / 2;
-  }
-}
 
 .side-content{
 
@@ -951,11 +1014,25 @@ body.nav-active{
 
 #you-might-like{
   @include pie-clearfix;
-  margin-bottom: $gap;
+  padding: ($gap * 2) 0;
 
   h2{
     font-size: 30px;
     margin-bottom: 10px;
+  }
+
+  .views-field-title{
+    font-family: $font_header;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: left;
+   // border-left: $color_accent solid 5px;
+    padding-left: 20px;
+    text-align: center;
+
+    a{
+      @extend %a_dk;
+    }
   }
 
   @include bp(s){
@@ -968,10 +1045,11 @@ body.nav-active{
 
 .pager{
   padding: $gap !important;
-  background-color: $page_med;
+  //background-color: $page_med;
   font-size: 30px;
   font-weight: 100;
   text-transform: uppercase;
+  
 
 }
 
@@ -1000,8 +1078,9 @@ label{
 
 
 input[type="text"],
-input[type="text"],
-input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
 textarea{
   padding: 10px;
   width: 100%;
@@ -1096,6 +1175,8 @@ input[type="button"]{
 
 .pane-node-comments{
   padding-top: 40px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 
@@ -1232,6 +1313,32 @@ input[type="button"]{
   display: table;
   z-index: 1;
 
+  h2{
+    font-size: 50px;
+   // position: absolute;
+    text-align: center;
+    margin-bottom: 40px;
+    //width: 100%;
+   // top: -20px;
+   // background-color: $color_main;
+   // padding: 10px 20px;
+   left: 0;
+  }
+
+  .btn{
+    position: absolute;
+    bottom: -25px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    padding: 0;
+    letter-spacing: 0;
+    line-height: 50px;
+    text-align: center;
+    left: 50%;
+    margin-left: -25px;
+  }
+
   @include bp(m){
     padding: 40px 20px;
   }
@@ -1248,22 +1355,28 @@ input[type="button"]{
 
   .content{
     @extend %box-accent;
+    //background-color: rgba(#fff, 0.9);
     line-height: 2em;
+    position: relative;
   }
 }
 
 #megan-slide{
   position: relative;
   z-index: 10;
+  padding-bottom: 40px;
 
   h2{
-    color: $color_accent;
-    margin-bottom: 20px;
+    //color: $color_accent;
+    margin-bottom: 0;
+    font-size: 50px;
 
     @include bp(m){
       text-align: center;
     }
   }
+
+
 
   .inner{
     @include pie-clearfix;
@@ -1346,6 +1459,9 @@ input[type="button"]{
   .quote{
     font-size: 3em;
     line-height: normal;
+    font-family: $font_header;
+    font-weight: 900;
+
 
 
 
@@ -1357,11 +1473,23 @@ input[type="button"]{
 
 #contact-slide{
 
+  h2{
+    font-size: 70px;
+  }
+
+  .email{
+
+    a{
+      @extend %btn_default;
+    }
+    
+  }
   .inner{
     text-align: center;
     padding-top: 80px;
     margin-bottom: 20px;
   }
+
 }
 
 
@@ -1400,16 +1528,28 @@ input[type="button"]{
 
 #front-devider{
   @include pie-clearfix;
-  background-color: darken($page_bg, 5%);
+  
   padding: 5px 0 0;
   margin: ($gap * 2) 0;
+  text-align: center;
 
   h3{
     text-align: center;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     font-size: ($gap / 2);  
     margin-bottom: 0;
-    
+    font-size: 50px;
+    font-weight: 900;
+
+    span{
+      font-style: italic;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  .btn{
+    margin-bottom: -20px;
   }
 
   .side,
@@ -1423,12 +1563,13 @@ input[type="button"]{
 
   .main{
     width: 100%;
+    background-color: #fff;
   }
 }
 
 #front-instafeed{
   @include pie-clearfix;
-  padding: 0 5px 5px;
+  padding: 40px;
 
   @include bp(m){
     //padding: 0 ($gap / 4) ($gap / 4);
@@ -1438,8 +1579,8 @@ input[type="button"]{
     float: left;
     line-height: 0;
     display: block;
-    width: 16.6%;
-    padding: 5px;
+    width: 12.5%;
+    padding: 2px;
 
     @include bp(m){
       //padding: ($gap / 4);
